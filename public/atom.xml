@@ -4,7 +4,7 @@
   <title><![CDATA[Matt Bridges]]></title>
   <link href="http://matt-bridges.com/atom.xml" rel="self"/>
   <link href="http://matt-bridges.com/"/>
-  <updated>2014-01-16T11:39:39-06:00</updated>
+  <updated>2014-02-03T22:21:48-06:00</updated>
   <id>http://matt-bridges.com/</id>
   <author>
     <name><![CDATA[Matt Bridges]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Experiencing the Asset Pipeline]]></title>
+    <link href="http://matt-bridges.com/blog/2014/02/03/experiencing-the-asset-pipeline/"/>
+    <updated>2014-02-03T22:00:07-06:00</updated>
+    <id>http://matt-bridges.com/blog/2014/02/03/experiencing-the-asset-pipeline</id>
+    <content type="html"><![CDATA[<p>Here at PeopleAdmin, we are constantly trying to improve our app. Well, isn&rsquo;t everybody. There are many things that we have done to improve our workflow, our speed, our developer happiness, etc. There is one thing that was still biting us from the old days of Rails, though.</p>
+
+<blockquote><p>We hadn&rsquo;t upgraded to the Asset Pipeline.</p></blockquote>
+
+<p>There were several reasons for this, but the simplest one is that we didn&rsquo;t do a lot of front-end development. We concentrated most of our efforts on the bad-end side of Rails and left the front alone. Sure, we touched it every so often to fix a bug or add a new feature that required fiddling with javascript and stylesheets, but in general we let it alone.</p>
+
+<p>Those days are now gone. More and more our app needed front-end care and organizing. As part of a new project we are working on, a lot of new javascript and styling was introduced and reminded us how languid our scripts and styles were. We needed to change. So now was the perfect time to revisit the dreaded Pipeline.</p>
+
+<p>There were several concerns about switching to the asset pipeline:</p>
+
+<ol>
+<li>How can we ensure we are not breaking things?</li>
+<li>How much manual work is necessary?</li>
+</ol>
+
+
+<p>Our app is, well, enourmous. We have a lot of javascript and CSS strewn throughout the app from the views to the assets to the layouts. If you know anything about Rails asset organization, you know this is a big no-no. &ldquo;You put page-specific styles in your view? Are you asking for a migrane in six months?&rdquo;.</p>
+
+<p>Here is how I approached the problem of reducing the number of breaks</p>
+
+<h2>Automate all the things</h2>
+
+<p><img class="right" src="http://matt-bridges.com/images/automate-all-the-things.jpg" width="350"></p>
+
+<p>Automation was key to our migration to the asset pipeline. Just constructing the script was enough work, but I couldn&rsquo;t have imagined doing it by hand and being confident that I caught all of the exceptions and oddities.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Path to BCrypt]]></title>
