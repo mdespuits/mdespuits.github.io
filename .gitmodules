@@ -1,0 +1,3 @@
+[submodule ".themes/minimize"]
+	path = .themes/minimized
+	url = https://github.com/lmm/minimized.git
