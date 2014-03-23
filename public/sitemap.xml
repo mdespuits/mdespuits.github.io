@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://matt-bridges.com/blog/2014/01/30/the-path-to-bcrypt/</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/blog/2014/01/30/the-path-to-bcrypt/</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
     <url>
-        <loc>http://matt-bridges.com/blog/2014/02/03/experiencing-the-asset-pipeline/</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
     <url>
-        <loc>http://matt-bridges.com/about/</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/about/</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
     <url>
-        <loc>http://matt-bridges.com/blog/archives/</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/blog/archives/</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
     <url>
-        <loc>http://matt-bridges.com/</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
     <url>
-        <loc>http://matt-bridges.com/robots.txt</loc>
-        <lastmod>2014-03-23T14:32:09-05:00</lastmod>
+        <loc>http://mattdbridges.github.io/robots.txt</loc>
+        <lastmod>2014-03-23T14:38:02-05:00</lastmod>
     </url>
 </urlset>

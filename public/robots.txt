@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://matt-bridges.com/sitemap.xml 
+Sitemap: http://mattdbridges.github.io/sitemap.xml 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Matt Bridges]]></title>
-  <link href="http://matt-bridges.com/atom.xml" rel="self"/>
-  <link href="http://matt-bridges.com/"/>
-  <updated>2014-03-23T14:32:46-05:00</updated>
-  <id>http://matt-bridges.com/</id>
+  <link href="http://mattdbridges.github.io/atom.xml" rel="self"/>
+  <link href="http://mattdbridges.github.io/"/>
+  <updated>2014-03-23T15:10:47-05:00</updated>
+  <id>http://mattdbridges.github.io/</id>
   <author>
     <name><![CDATA[Matt Bridges]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Experiencing the Asset Pipeline]]></title>
-    <link href="http://matt-bridges.com/blog/2014/02/03/experiencing-the-asset-pipeline/"/>
+    <link href="http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/"/>
     <updated>2014-02-03T22:00:07-06:00</updated>
-    <id>http://matt-bridges.com/blog/2014/02/03/experiencing-the-asset-pipeline</id>
+    <id>http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline</id>
     <content type="html"><![CDATA[<p>Here at PeopleAdmin, we are constantly trying to improve our app. Well, isn&rsquo;t everybody. There are many things that we have done to improve our workflow, our speed, our developer happiness, etc. There is one thing that was still biting us from the old days of Rails, though.</p>
 
 <blockquote><p>We hadn&rsquo;t upgraded to the Asset Pipeline.</p></blockquote>
@@ -40,7 +40,7 @@
 
 <h2>Automate all the things</h2>
 
-<p><img class="right" src="http://matt-bridges.com/images/automate-all-the-things.jpg" width="350"></p>
+<p><img class="right" src="http://mattdbridges.github.io/images/automate-all-the-things.jpg" width="350"></p>
 
 <p>Automation was key to our migration to the asset pipeline. Just constructing the script was enough work, but I couldn&rsquo;t have imagined doing it by hand and being confident that I caught all of the exceptions and oddities.</p>
 ]]></content>
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Path to BCrypt]]></title>
-    <link href="http://matt-bridges.com/blog/2014/01/30/the-path-to-bcrypt/"/>
+    <link href="http://mattdbridges.github.io/blog/2014/01/30/the-path-to-bcrypt/"/>
     <updated>2014-01-30T00:00:00-06:00</updated>
-    <id>http://matt-bridges.com/blog/2014/01/30/the-path-to-bcrypt</id>
+    <id>http://mattdbridges.github.io/blog/2014/01/30/the-path-to-bcrypt</id>
     <content type="html"><![CDATA[<p>Ok, just for a minute, imagine that you have just inherited a large codebase. In trying to understand how it all works together, you decide to look at the <code>users</code> table. What greets your eyes?</p>
 
 <p>If you are a software engineer or have been for any amount of time, you care about security. So when you find that <code>User</code> passwords are stored in a poorly encrypted format, your heart sinks. It sinks even more when you realize how many people use your app, so changing it isn&rsquo;t an simple drop it in and it works.</p>
