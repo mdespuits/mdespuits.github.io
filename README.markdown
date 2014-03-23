@@ -1,4 +1,4 @@
-## Matt-Bridges.com
+# matt-bridges.com
 
 This is the source of [matt-bridges.com](http://matt-bridges.com). It's built on [Octopress](http://octopress.org) with the theme [minimized](https://github.com/lmm/minimized).
 
