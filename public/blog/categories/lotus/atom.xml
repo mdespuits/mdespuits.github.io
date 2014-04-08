@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lotus | Matt Bridges]]></title>
+  <link href="http://mattdbridges.github.io/blog/categories/lotus/atom.xml" rel="self"/>
+  <link href="http://mattdbridges.github.io/"/>
+  <updated>2014-04-08T16:59:53-05:00</updated>
+  <id>http://mattdbridges.github.io/</id>
+  <author>
+    <name><![CDATA[Matt Bridges]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Welcome to Lotus: A minimal and testable Ruby web framework]]></title>
+    <link href="http://mattdbridges.github.io/blog/2014/04/08/welcome-to-lotus/"/>
+    <updated>2014-04-08T16:29:47-05:00</updated>
+    <id>http://mattdbridges.github.io/blog/2014/04/08/welcome-to-lotus</id>
+    <content type="html"><![CDATA[<p>If you&rsquo;ve been developing in Rails for any period of time, you know there are certain parts of Rails that are just difficult or frustrating to work with when you are trying to test (cough, cough, controllers, cough). I have gone back and forth between not testing them, testing them, testing them via acceptance tests with capybara, etc. It&rsquo;s hard to do well.</p>
+
+<p>This is one of the reasons the new framework <a href="http://lotusrb.org/">Lotus</a> caught my eye a few months back. It&rsquo;s another entry in the minimal web frameworks for Ruby, but it has a few unique features that set it apart in my mind.</p>
+
+<h1>So, what is Lotus?</h1>
+
+<p>As stated on the website&hellip;</p>
+
+<blockquote><p>Lotus is an Open Source software for MVC web development. It&rsquo;s simple, fast, and lightweight.</p></blockquote>
+
+<p>I couldn&rsquo;t put it better. If you go to the Github <a href="https://github.com/lotus/">Lotus organization</a>, you will notice that several of the pieces that we normally associate with Rails are in separate gems. Controllers, routes, views, and models are all pulled apart into their own gems.</p>
+
+<p>It gets better. They are all independent of each other. I&rsquo;m not sure if very many people know how to use <code>actionview</code> or <code>actionpack</code> outside of Rails. The entire point is to make it easy to plug in only pieces that we want or need for our web app. Need a router? Awesome. Need views? Nope, that&rsquo;s ok. We don&rsquo;t need them.</p>
+
+<h1>What&rsquo;s the big deal?</h1>
+
+<p>Ok, it&rsquo;s another framework. It&rsquo;s another paradigm to learn and wrap your head around. What makes it a big deal is how minimal and how uninvasive it is to test.</p>
+
+<p>Not only that, the source itself is easy to read and understand. It&rsquo;s extremely well-documented and has 100% unit test coverage. In short, I would find it <em>infinitely</em> easier to jump in and contribute to a Lotus framework than Rails because of how simple to follow the source really is.</p>
+
+<p>Let&rsquo;s take a controller example:</p>
+
+<p>```ruby controllers/home_controller.rb
+class HomeController
+  class Index</p>
+
+<pre><code>include Lotus::Action
+
+expose :planet
+
+def call(params)
+  @planet = 'World'
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  class Create</p>
+
+<pre><code>include Lotus::Action
+
+expose :planet
+
+def call(params)
+  redirect_to '/'
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Pretty dead simple, right? No views, not routing, just a controller with a mixin <code>Lotus::Action</code>. Doesn&rsquo;t even do much except return or redirect. Here are my specs that over all that I care about.</p>
+
+<p>```ruby spec/controllers/home_controller_spec.rb
+require &lsquo;spec_helper&rsquo;</p>
+
+<p>class HomeController
+  describe Index do</p>
+
+<pre><code>it "calls an action" do
+  action = Index.new
+  response = action.call({})
+
+  expect(response[0]).to eq 200
+  expect(response[1]).to eq({"Content-Type" =&gt; "application/octet-stream"})
+  expect(action.exposures).to eq({planet: "World"})
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  describe Create do</p>
+
+<pre><code>it "redirects back home" do
+  response = Create.new.call({})
+  expect(response[0]).to eq 302
+  expect(response[1]["Location"]).to eq "/"
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>And to make sure I&rsquo;m not pulling any punches, here is the source for my <code>spec_helper.rb</code>.</p>
+
+<p><code>ruby spec_helper.rb
+require 'lotus/controller'
+require_relative '../controllers/home_controller'
+</code></p>
+
+<p>That&rsquo;s it! All I need is the gem and my file and I can run my specs&hellip;</p>
+
+<p>```bash
+$ rspec spec/controllers/home_controller_spec.rb
+..</p>
+
+<p>Finished in 0.00353 seconds
+2 examples, 0 failures</p>
+
+<p>Randomized with seed 48373
+```</p>
+
+<p>Success!</p>
+
+<p>They are fast, they are simple, and everything is easy to mock/stub if necessary. They are just callable objects that return the typical Rack response.</p>
+
+<p>This is the pattern you find with the other pieces of Lotus. Each is self-contained and easy to write tests against.</p>
+
+<p>And if you aren&rsquo;t sure how to test something, copy a spec from Lotus itself. They are that simple and that straightforward.</p>
+
+<h1>Is it ready?</h1>
+
+<p>In short, yes and no.</p>
+
+<p><a href="https://github.com/jodosha">Luca Guidi</a> has been releasing one piece of the Lotus framework each month. At the time of this writing (April 8, 2014), <code>Lotus::Model</code> has not been released, but who needs models when in the meantime you have POROs!</p>
+
+<h1>How about a demo?</h1>
+
+<p>All in good time. That will come in Part 2 when I create a fully TDD'ed Todo app with Lotus.</p>
+]]></content>
+  </entry>
+  
+</feed>
