@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tdd, | Matt Bridges]]></title>
   <link href="http://mattdbridges.github.io/blog/categories/tdd/atom.xml" rel="self"/>
   <link href="http://mattdbridges.github.io/"/>
-  <updated>2014-04-10T10:01:03-05:00</updated>
+  <updated>2014-04-10T10:03:01-05:00</updated>
   <id>http://mattdbridges.github.io/</id>
   <author>
     <name><![CDATA[Matt Bridges]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Welcome to Lotus: A minimal and testable Ruby web framework]]></title>
-    <link href="http://mattdbridges.github.io/blog/2014/04/08/welcome-to-lotus/"/>
-    <updated>2014-04-08T16:29:47-05:00</updated>
-    <id>http://mattdbridges.github.io/blog/2014/04/08/welcome-to-lotus</id>
+    <link href="http://mattdbridges.github.io/blog/2014/04/11/welcome-to-lotus/"/>
+    <updated>2014-04-11T16:29:47-05:00</updated>
+    <id>http://mattdbridges.github.io/blog/2014/04/11/welcome-to-lotus</id>
     <content type="html"><![CDATA[<p>If you&rsquo;ve been developing in Rails for any period of time, you know there are certain parts of Rails that are just difficult or frustrating to work with when you are trying to test (cough, cough, controllers, cough). I have gone back and forth between not testing them, testing them, testing them via acceptance tests with capybara, etc. It&rsquo;s hard to do well.</p>
 
 <p>This is one of the reasons the new framework <a href="http://lotusrb.org/">Lotus</a> caught my eye a few months back. It&rsquo;s another entry in the minimal web frameworks for Ruby, but it has a few unique features that set it apart in my mind.</p>

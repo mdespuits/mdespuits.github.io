@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to Lotus: A minimal and testable Ruby web framework"
-date: 2014-04-08 16:29:47 -0500
+date: 2014-04-11 16:29:47 -0500
 comments: true
 categories: tdd, lotus
 ---
