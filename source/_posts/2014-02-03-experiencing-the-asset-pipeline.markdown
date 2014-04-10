@@ -3,6 +3,7 @@ layout: post
 title: "Experiencing the Asset Pipeline"
 date: 2014-02-03 22:00:07 -0600
 comments: true
+published: false
 categories:
 ---
 
