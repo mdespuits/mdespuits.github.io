@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Experiencing the Asset Pipeline - Matt Bridges</title>
+  <meta name="author" content="Matt Bridges">
+
+  
+  <meta name="description" content="Here at PeopleAdmin, we are constantly trying to improve our app. Well, isn&rsquo;t everybody. There are many things that we have done to improve our &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Matt Bridges" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Matt Bridges</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="http://www.github.com/">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Experiencing the Asset Pipeline</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T22:00:07-06:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Here at PeopleAdmin, we are constantly trying to improve our app. Well, isn&rsquo;t everybody. There are many things that we have done to improve our workflow, our speed, our developer happiness, etc. There is one thing that was still biting us from the old days of Rails, though.</p>
+
+<blockquote><p>We hadn&rsquo;t upgraded to the Asset Pipeline.</p></blockquote>
+
+<p>There were several reasons for this, but the simplest one is that we didn&rsquo;t do a lot of front-end development. We concentrated most of our efforts on the bad-end side of Rails and left the front alone. Sure, we touched it every so often to fix a bug or add a new feature that required fiddling with javascript and stylesheets, but in general we let it alone.</p>
+
+<p>Those days are now gone. More and more our app needed front-end care and organizing. As part of a new project we are working on, a lot of new javascript and styling was introduced and reminded us how languid our scripts and styles were. We needed to change. So now was the perfect time to revisit the dreaded Pipeline.</p>
+
+<p>There were several concerns about switching to the asset pipeline:</p>
+
+<ol>
+<li>How can we ensure we are not breaking things?</li>
+<li>How much manual work is necessary?</li>
+</ol>
+
+
+<p>Our app is, well, enourmous. We have a lot of javascript and CSS strewn throughout the app from the views to the assets to the layouts. If you know anything about Rails asset organization, you know this is a big no-no. &ldquo;You put page-specific styles in your view? Are you asking for a migrane in six months?&rdquo;.</p>
+
+<p>Here is how I approached the problem of reducing the number of breaks</p>
+
+<h2>Automate all the things</h2>
+
+<p><img class="right" src="/images/automate-all-the-things.jpg" width="350"></p>
+
+<p>Automation was key to our migration to the asset pipeline. Just constructing the script was enough work, but I couldn&rsquo;t have imagined doing it by hand and being confident that I caught all of the exceptions and oddities.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Matt Bridges</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T22:00:07-06:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/" data-via="mattdbridges" data-counturl="http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/01/30/the-path-to-bcrypt/" title="Previous Post: The Path to BCrypt">&laquo; The Path to BCrypt</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/04/08/welcome-to-lotus/" title="Next Post: Welcome to Lotus: A minimal and testable Ruby web framework">Welcome to Lotus: A minimal and testable Ruby web framework &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/08/welcome-to-lotus/">Welcome to Lotus: A Minimal and Testable Ruby Web Framework</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/03/experiencing-the-asset-pipeline/">Experiencing the Asset Pipeline</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/30/the-path-to-bcrypt/">The Path to BCrypt</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/mattdbridges">@mattdbridges</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mattdbridges',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Matt Bridges -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mattdbridges';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/';
+        var disqus_url = 'http://mattdbridges.github.io/blog/2014/02/03/experiencing-the-asset-pipeline/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
