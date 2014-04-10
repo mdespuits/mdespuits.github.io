@@ -20,6 +20,10 @@ I couldn't put it better. If you go to the Github [Lotus organization](https://g
 
 It gets better. They are all independent of each other. I'm not sure if very many people know how to use `actionview` or `actionpack` outside of Rails. The entire point is to make it easy to plug in only pieces that we want or need for our web app. Need a router? Awesome. Need views? Nope, that's ok. We don't need them.
 
+Testing is also fast. Very fast.
+
+...mind-blowingly fast.
+
 # What's the big deal?
 
 Ok, it's another framework. It's another paradigm to learn and wrap your head around. What makes it a big deal is how minimal and how uninvasive it is to test.
@@ -101,11 +105,7 @@ Randomized with seed 48373
 
 Success!
 
-They are fast, they are simple, and everything is easy to mock/stub if necessary. They are just callable objects that return the typical Rack response.
-
-This is the pattern you find with the other pieces of Lotus. Each is self-contained and easy to write tests against.
-
-And if you aren't sure how to test something, copy a spec from Lotus itself. They are that simple and that straightforward.
+And if you aren't sure how to test something, copy a spec from Lotus itself. They are that simple and that straightforward. You can test each part of your Lotus application without being too coupled to another part.
 
 # Is it ready?
 
